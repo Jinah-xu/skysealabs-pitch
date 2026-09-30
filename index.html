@@ -346,10 +346,11 @@ body{cursor:default;user-select:none}
 body.mouse .fsbtn{opacity:1}
 .fsbtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
 
+/* Reduced motion: keep one-shot reveals (entrances, count-ups, chart draws); play looping effects once only */
 @media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;animation-delay:0s!important;transition:none!important}
-  .tl{clip-path:none}.ready{opacity:1}
+  *,*::before,*::after{animation-iteration-count:1!important}
 }
+@media (hover:none) and (pointer:coarse){ .hint .kb{display:none} .hint .touch{display:inline!important} }
 </style>
 </head>
 <body>
@@ -999,7 +1000,7 @@ body.mouse .fsbtn{opacity:1}
 </div>
 </div>
 
-<div class="hint" id="hint"><kbd>←</kbd><kbd>→</kbd> หรือ <kbd>Space</kbd> / คลิก เพื่อเปลี่ยนสไลด์ · <kbd>F</kbd> เต็มจอ</div>
+<div class="hint" id="hint"><span class="kb"><kbd>←</kbd><kbd>→</kbd> หรือ <kbd>Space</kbd> / คลิก เพื่อเปลี่ยนสไลด์ · <kbd>F</kbd> เต็มจอ</span><span class="touch" style="display:none">ปัดซ้าย/ขวา หรือแตะเพื่อเปลี่ยนสไลด์ · หมุนจอแนวนอนจะเห็นชัดขึ้น</span></div>
 <button class="fsbtn" id="fsbtn" title="Fullscreen (F)" data-noadvance><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
 
 <script>
@@ -1027,7 +1028,6 @@ body.mouse .fsbtn{opacity:1}
   }
   const CNT='.hl,.hc,.stat48,.big21,.cap .v,.lg b,.mini .vv,.bar .val,.dc .v,.rc .big,.cnt';
   const NUM=/\d[\d,]*(?:\.\d+)?/g;
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   let runId=0;
   function fmt(m,p){
     const d=(m.split('.')[1]||'').length, v=parseFloat(m.replace(/,/g,''))*p;
@@ -1041,7 +1041,6 @@ body.mouse .fsbtn{opacity:1}
     });
     const list=[...nodes].filter(n=>{ if(n.__orig==null) n.__orig=n.nodeValue; return /\d/.test(n.__orig); });
     const paint=p=>list.forEach(n=>{ n.nodeValue=n.__orig.replace(NUM,m=>fmt(m,p)); });
-    if(reduce){paint(1);return}
     paint(0);
     const t0=performance.now()+450, D=1600;
     (function tick(now){
