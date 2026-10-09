@@ -372,6 +372,36 @@ body{cursor:default;user-select:none}
 @keyframes pop{from{transform:scale(0);opacity:0}}
 .pk .nb{font-family:var(--num);font-weight:700;color:#A5F3FC}
 .pk b{color:#F8FAFC;font-weight:600}
+
+/* ---------- SLIDE 12 ---------- */
+.s12 .split{grid-template-columns:54fr 46fr;gap:28px;margin-top:20px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:12px;min-height:0}
+.pl{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 10px 26px -18px rgba(15,23,42,.3);display:flex;flex-direction:column;gap:6px}
+.pl .pt{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:center}
+.pl .pi{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(140deg,#0284C7,#06B6D4);box-shadow:0 8px 18px -8px rgba(2,132,199,.7)}
+.pl:nth-child(2n) .pi{background:linear-gradient(140deg,#14B8A6,#06B6D4)}
+.pl .pi svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.pl h3{font-size:19px;font-weight:600;color:var(--ink);line-height:1.3}
+.pl p{font-size:18px;line-height:1.5;color:var(--body)}
+.tiers{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:stretch}
+.tr{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px 14px 14px;box-shadow:0 16px 36px -26px rgba(15,23,42,.4)}
+.tr.pop{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(140deg,#06B6D4,#6366F1) border-box;
+  box-shadow:0 26px 50px -24px rgba(2,132,199,.6),0 0 0 6px rgba(6,182,212,.07);margin-top:-12px;margin-bottom:-6px}
+.tr .badge2{position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--num);font-size:11px;font-weight:700;letter-spacing:.12em;color:#fff;padding:5px 10px;border-radius:999px;background:linear-gradient(90deg,#0284C7,#6366F1);box-shadow:0 6px 16px -6px rgba(99,102,241,.8)}
+.tr .tn{font-family:var(--num);font-size:24px;font-weight:700;color:var(--ink)}
+.tr.pop .tn{background:linear-gradient(90deg,#0284C7,#6366F1);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tr .tg{font-size:15px;line-height:1.4;color:var(--muted);margin-top:4px;min-height:44px}
+.tr .spec{margin-top:14px;padding-top:14px;border-top:1px dashed #CBD5E1;display:flex;flex-direction:column;gap:12px}
+.tr .sv{display:flex;flex-direction:column;align-items:flex-start;gap:4px;font-size:15px;color:var(--muted)}
+.tr .sv b{font-family:var(--num);font-size:42px;font-weight:700;color:var(--ink);line-height:1;letter-spacing:-.02em}
+.tr.pop .sv b{color:#0284C7}
+.cap2{height:10px;border-radius:6px;background:#E2E8F0;overflow:hidden;margin-top:8px}
+.cap2 i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,#06B6D4,#6366F1);transform-origin:left}
+.slide.active .cap2 i{animation:fillx 1.4s cubic-bezier(.2,.8,.2,1) both .7s}
+.tr ul{list-style:none;margin-top:18px;padding-top:16px;border-top:1px dashed #CBD5E1;display:flex;flex-direction:column;gap:12px}
+.tr li{display:grid;grid-template-columns:16px 1fr;gap:8px;font-size:16px;line-height:1.4;color:var(--body)}
+.tr li svg{width:16px;height:16px;margin-top:2px}
+.tr .axis{margin-top:auto;padding-top:10px;font-family:var(--num);font-size:11px;letter-spacing:.1em;color:#94A3B8}
 /* ---------- HUD ---------- */
 .progress{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#06B6D4,#6366F1);transition:width .5s ease;z-index:20}
 .hint{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);padding:9px 16px;border-radius:999px;background:rgba(15,23,42,.85);color:#E2E8F0;font-family:var(--th);font-size:13px;
@@ -497,7 +527,7 @@ body.mouse .fsbtn{opacity:1}
       </svg>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Unified AI Chatbot &amp; RoboCall</span><span>01 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Unified AI Chatbot &amp; RoboCall</span><span>01 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 2 — PAIN: PEOPLE ================= -->
@@ -574,7 +604,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Executive Pains</span><span>02 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Executive Pains</span><span>02 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 3 — PAIN: SPEED ================= -->
@@ -635,7 +665,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Executive Pains</span><span>03 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Executive Pains</span><span>03 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 4 — PAIN: COST & BLIND SPOT ================= -->
@@ -697,7 +727,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Executive Pains</span><span>04 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Executive Pains</span><span>04 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 5 — UNIFIED BRAIN ================= -->
@@ -787,7 +817,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>05 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>05 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 6 — PIPELINE ================= -->
@@ -828,7 +858,7 @@ body.mouse .fsbtn{opacity:1}
       <span class="tag"><i></i>Zero Delay</span><span class="tag"><i></i>ทำงาน 24/7</span><span class="tag"><i></i>ไม่ต้องเพิ่มคน</span><span class="tag"><i></i>ข้อมูลไหลต่อเนื่องทุกขั้น</span>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>06 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>06 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 7 — SCALABILITY ================= -->
@@ -866,7 +896,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>07 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>07 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 8 — GOVERNANCE ================= -->
@@ -927,7 +957,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>08 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The System Solution</span><span>08 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 9 — ROI ================= -->
@@ -981,7 +1011,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Business ROI</span><span>09 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>The Business ROI</span><span>09 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 10 — CTA ================= -->
@@ -1029,7 +1059,7 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Unified AI Chatbot &amp; RoboCall</span><span>10 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Unified AI Chatbot &amp; RoboCall</span><span>10 / 12</span></footer>
 </section>
 
 <!-- ================= SLIDE 11 — RISK-FREE POC ================= -->
@@ -1089,7 +1119,40 @@ body.mouse .fsbtn{opacity:1}
       </div>
     </div>
   </div>
-  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Exclusive Proposal</span><span>11 / 11</span></footer>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Exclusive Proposal</span><span>11 / 12</span></footer>
+</section>
+
+<!-- ================= SLIDE 12 — ONGOING VALUE ================= -->
+<section class="slide light s12">
+  <div class="pad">
+    <div class="eyebrow a" style="--d:0">Ongoing Partnership &amp; Value<span class="kick">The Ongoing Value — ค่า Subscription รายเดือน ลูกค้าได้อะไรจาก SKYSEA LABS</span></div>
+    <h2 class="title a" style="--d:1">ไม่ใช่แค่ค่าเช่าระบบ แต่คือ<em>ทีมผู้เชี่ยวชาญดูแล AI</em> ของคุณทุกเดือน</h2>
+    <p class="sub a" style="--d:2;font-size:20px;margin-top:6px">ขับเคลื่อนยอดขายต่อเนื่องด้วย 6 บริการหลัก พร้อม SLA ดูแลหลังบ้านแบบมืออาชีพ</p>
+    <div class="split">
+      <div class="pillars">
+        <div class="pl a" style="--d:2"><div class="pt"><div class="pi"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6"/><path d="M16 11l2 2 4-4"/></svg></div><h3>AI Manager ประจำร้าน</h3></div><p>ตรวจคุณภาพคำตอบ ปรับบท และส่งรายงานสรุปสถิติ/KPI ทุกเดือน</p></div>
+        <div class="pl a" style="--d:2"><div class="pt"><div class="pi"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg></div><h3>เสียง AI มาตรฐาน &amp; โคลนเสียง</h3></div><p>ปรับสำเนียง จังหวะ และทำพจนานุกรมชื่อร้าน/สินค้าไม่ให้พูดผิด</p></div>
+        <div class="pl a" style="--d:3"><div class="pt"><div class="pi"><svg viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg></div><h3>Smart LINE Notification</h3></div><p>แจ้งเตือนเข้า LINE ทีมงานทันทีเมื่อมี ลีดใหม่, นัดใหม่, หรือเคสส่งต่อแอดมิน</p></div>
+        <div class="pl a" style="--d:3"><div class="pt"><div class="pi"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M12 8v5M9.5 10.5h5"/></svg></div><h3>พัฒนาบทเปิด (First Message)</h3></div><p>เขียนและจูนประโยคแรกของแชตและสายโทร เพิ่มอัตราการคุยต่อ</p></div>
+        <div class="pl a" style="--d:4"><div class="pt"><div class="pi"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.3M3 12A9 9 0 0 1 18.5 5.7"/><path d="M18 2v4h-4M6 22v-4h4"/></svg></div><h3>วางระบบติดตามลูกค้า</h3></div><p>ตั้งสเตจการตามลูกค้าเก่า/ลีดเงียบ อัตโนมัติอย่างถูกกาลเทศะ</p></div>
+        <div class="pl a" style="--d:4"><div class="pt"><div class="pi"><svg viewBox="0 0 24 24"><path d="M5 4h3.5l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5L15 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div><h3>จัดการเบอร์และคู่สาย</h3></div><p>รองรับ 5 ถึง 30 คู่สายพร้อมกัน ขยายได้ทันทีเมื่อธุรกิจโต</p></div>
+      </div>
+      <div class="visual">
+        <div class="tiers">
+          <div class="tr  a" style="--d:3"><div class="tn">Starter</div><div class="tg">ดูแลพื้นฐานครบวงจร</div>
+          <div class="spec"><div class="sv cnt"><b>2</b> เบอร์</div><div><div class="sv cnt"><b>5</b> คู่สายพร้อมกัน</div><div class="cap2"><i style="width:16.7%"></i></div></div></div>
+          <ul><li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7.2" fill="#E0F2FE"/><path d="M4.8 8.3l2.1 2.1 4.3-4.6" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ปรับบท 2 ครั้งต่อเดือน</span></li></ul></div>
+          <div class="tr pop a" style="--d:4"><span class="badge2">MOST POPULAR</span><div class="tn">Growth</div><div class="tg">เพิ่มระบบเรียนรู้อัตโนมัติ + โคลนเสียง</div>
+          <div class="spec"><div class="sv cnt"><b>5</b> เบอร์</div><div><div class="sv cnt"><b>15</b> คู่สายพร้อมกัน</div><div class="cap2"><i style="width:50%"></i></div></div></div>
+          <ul><li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7.2" fill="#E0F2FE"/><path d="M4.8 8.3l2.1 2.1 4.3-4.6" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ระบบเรียนรู้อัตโนมัติ</span></li><li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7.2" fill="#E0F2FE"/><path d="M4.8 8.3l2.1 2.1 4.3-4.6" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>โคลนเสียงพนักงาน 1 เสียง</span></li></ul></div>
+          <div class="tr  a" style="--d:5"><div class="tn">Scale</div><div class="tg">Full Enterprise Support</div>
+          <div class="spec"><div class="sv cnt"><b>10</b> เบอร์</div><div><div class="sv cnt"><b>30</b> คู่สายพร้อมกัน</div><div class="cap2"><i style="width:100%"></i></div></div></div>
+          <ul><li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7.2" fill="#E0F2FE"/><path d="M4.8 8.3l2.1 2.1 4.3-4.6" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>รายงานรายสัปดาห์</span></li><li><svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7.2" fill="#E0F2FE"/><path d="M4.8 8.3l2.1 2.1 4.3-4.6" fill="none" stroke="#0284C7" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ผู้ดูแลโดยตรง</span></li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="foot"><span class="fb"><svg class="logo"><use href="#logo"/></svg>SkySeaLabs</span><span>Ongoing Partnership</span><span>12 / 12</span></footer>
 </section>
 
 <div class="progress" id="progress"></div>
